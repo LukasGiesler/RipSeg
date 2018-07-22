@@ -1,0 +1,17 @@
+# Create Conda Virtual Environment
+conda create -n computervision python=3.6 pip
+# activate environment
+activate computervision
+# upgrade pip
+python -m pip install --upgrade pip
+# upgrade setuptools
+pip install --upgrade setuptools
+# install requirements.txt(If u want to use the tensorflow-gpu version change the tensorflow version in the requirements.txt)
+pip install -r requirements.txt
+# install pycocotools(For MaskRCNN)
+# NOTE: pycocotools requires Visual C++ 2015 Build Tools
+# download here if needed http://landinghub.visualstudio.com/visual-cpp-build-tools
+# rc.exe error https://stackoverflow.com/questions/14372706/visual-studio-cant-build-due-to-rc-exe
+pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+# install opencv 
+pip install opencv_python-3.4.1-cp36-cp36m-win_amd64.whl
